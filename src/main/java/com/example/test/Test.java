@@ -47,10 +47,11 @@ public class Test {
 		}
 		
 		lights = readInput();
-		int step = bestStep;
-		lights.forEach(l -> l.move(step));
+		int stepsUntilMessage = bestStep;
+		lights.forEach(l -> l.move(stepsUntilMessage));
 		
 		print(lights);
+		System.out.println("\n @ " + stepsUntilMessage + " seconds");
 	}
 	
 	public static List<Light> readInput() throws IOException, URISyntaxException {
